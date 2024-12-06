@@ -1,0 +1,276 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9fafc;
+  color: #333;
+  transition: all 0.3s ease;
+  flex-direction: column;
+}
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+#login-screen {
+  text-align: center;
+}
+
+#login-form input {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #8bc34a;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#login-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+  background-color: #388e3c;
+}
+
+#taskboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #6e6e6e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .user-info span {
+  font-size: 14px;
+  color: #fff;
+}
+
+header .user-info button {
+  padding: 6px 12px;
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header .user-info button:hover {
+  background-color: #e53935;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex: 3;
+}
+
+.column {
+  background: #fff;
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  padding: 10px;
+  width: 220px;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+body.dark .column {
+  background: #444;
+  border-color: #ffb74d;
+}
+
+.column h2 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #ff5722;
+  cursor: pointer;
+}
+
+.column .edit-column {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.column .edit-column:hover {
+  background-color: #e65100;
+}
+
+.tasks {
+  min-height: 100px;
+  padding: 5px;
+  background-color: #ffe0b2;
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .tasks {
+  background-color: #5d4037;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+button.new-task {
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.new-task:hover {
+  background-color: #e65100;
+}
+
+button.edit-task {
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.edit-task:hover {
+  background-color: #e65100;
+}
+
+button.delete-column,
+button.delete-task {
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.delete-column:hover,
+button.delete-task:hover {
+  background-color: #e53935;
+}
+
+#add-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 180px;
+  transition: background 0.3s ease, border 0.3s ease;
+  box-shadow: none;
+}
+
+body.dark #add-column {
+  background: #333;
+  border-color: #555;
+}
+
+#add-column input {
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 14px;
+  width: calc(100% - 16px);
+}
+
+#add-column button {
+  padding: 8px 16px;
+  background-color: #999;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#add-column button:hover {
+  background-color: #777;
+}
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark header {
+  background-color: #333;
+}
+
+body.dark .column h2 {
+  color: #ff5722;
+}
+
+body.dark #add-column input {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark #add-column button {
+  background-color: #444;
+}
+
+body.dark #add-column button:hover {
+  background-color: #333;
+}
