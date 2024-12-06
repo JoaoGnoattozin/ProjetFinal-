@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-screen">
+    <h1>TaskBoard</h1>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Digite seu email" required>
+      <button type="submit">Acessar</button>
+    </form>
+  </div>
+
+  <div id="taskboard" class="hidden">
+    <header class="header-fixed">
+      <h1>TaskBoard</h1>
+      <div class="user-info">
+        <span id="user-email">Email</span>
+        <button id="logout">Logout</button>
+        <label>
+          Dark Mode
+          <input type="checkbox" id="dark-mode-toggle">
+        </label>
+      </div>
+    </header>
+    
+    <main>
+      <div id="columns"></div>
+      
+      <!-- Adicionar novo quadro -->
+      <div id="add-column">
+        <h2>Adicionar Quadro</h2>
+        <input type="text" id="new-column-title" placeholder="Título do quadro">
+        <button id="add-column-button">Adicionar Quadro</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
